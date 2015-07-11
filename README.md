@@ -17,8 +17,9 @@ Permissions
 
 Commands
 -----------
-/glist - Shows the number of players online in the bungee network.
-/find - Allows you to search for a specified player in the server.
+`/glist` - Shows the number of players online in the bungee network.
+
+`/find` - Allows you to search for a specified player in the server.
 
 -----------
 
