@@ -27,6 +27,7 @@ Commands
 Config File
 -----------
 `Vanish Commands: /vanish;/v;/evanish;/ev`
+
 `#Please use semicolon(;) to separate each vanish command.`
 
 -----------
