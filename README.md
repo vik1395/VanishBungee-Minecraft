@@ -38,4 +38,5 @@ This plugin is licensed under [CC Attribution-ShareAlike 4.0 International](http
 In very basic terms, Do whatever you want with the code of this plugin, as long as you give credits to the author and/or the plugin itself.
 
 Plugin made by a member of
+
 ![Legitplay.net](http://legitplay.net/images/logo.gif)
