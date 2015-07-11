@@ -28,26 +28,26 @@ public class PlayerChatListener implements Listener
     		
     		String[] args = null;
     		Main m = new Main();
-    		if(e.getMessage().startsWith("/vanish"))
+    		if(e.getMessage().toLowerCase().startsWith("/vanish"))
     		{
     			CommandSender cm = (CommandSender) e.getSender();
     			m.vanish(cm);
     		}
     		
-    		else if(e.getMessage().startsWith("/glist"))
+    		else if(e.getMessage().toLowerCase().startsWith("/glist"))
         	{
     			CommandSender cm = (CommandSender) e.getSender();
-        		e.setCancelled(true);
         		args = e.getMessage().split(" ");
         		m.glistCmd(cm, args);
+        		e.setCancelled(true);
         	}
         	
-        	else if(e.getMessage().startsWith("/find"))
+        	else if(e.getMessage().toLowerCase().startsWith("/find"))
         	{
         		CommandSender cm = (CommandSender) e.getSender();
-        		e.setCancelled(true);
         		args = e.getMessage().split(" ");
         		m.findCmd(cm, args);
+        		e.setCancelled(true);
         	}
     		
         	else
@@ -58,6 +58,7 @@ public class PlayerChatListener implements Listener
         			{
         				CommandSender cm = (CommandSender) e.getSender();
             			m.vanish(cm);
+            			e.setCancelled(true);
         			}
         		}
         	}
