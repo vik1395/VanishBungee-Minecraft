@@ -32,7 +32,7 @@ public class Glist extends Command
 {
 	public Glist()
 	{
-		super("glist", "vanishbungee.glist");
+		super("glist", "");
 	}
 
 	@Override

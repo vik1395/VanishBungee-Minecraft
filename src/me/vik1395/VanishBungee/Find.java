@@ -26,7 +26,7 @@ public class Find extends Command
 {
 	public Find()
 	{
-		super("find", "vanishbungee.find");
+		super("find", "");
 	}
 	
 	@Override
