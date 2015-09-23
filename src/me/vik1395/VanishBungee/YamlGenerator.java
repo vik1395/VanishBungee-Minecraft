@@ -1,9 +1,8 @@
 package me.vik1395.VanishBungee;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
 
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
@@ -30,50 +29,26 @@ public class YamlGenerator
     public static ConfigurationProvider cProvider;
     public static File cFile;
     
-	public void setup()
+    public void saveDefaultConfig()
 	{
-		File cFolder = new File(Main.plugin.getDataFolder(),"");
+		File file = new File(Main.plugin.getDataFolder(), "config.yml");
+		ConfigurationProvider cProvider = ConfigurationProvider.getProvider(YamlConfiguration.class);
 		
-		if (!cFolder.exists()) 
+        if (!Main.plugin.getDataFolder().exists())
+        {
+			Main.plugin.getDataFolder().mkdir();
+        }
+		try
 		{
-	        cFolder.mkdir();
+	        if (!file.exists()) 
+	        {
+					Files.copy(Main.plugin.getResourceAsStream("config.yml"), file.toPath());
+	        }
+		    config = cProvider.load(file);
 		}
-		
-		cFile = new File(Main.plugin.getDataFolder() + "/config.yml");
-		
-		if (!cFile.exists()) 
-		{
-	        save();
-		}
-		
-		cProvider = ConfigurationProvider.getProvider(YamlConfiguration.class);
-	    try 
-	    {
-	        config = cProvider.load(cFile);
-	    } 
 	    catch (IOException e) 
 	    {
 	        e.printStackTrace();
 	    }
-	}
-	
-	public void save()
-	{
-		try 
-        {
-        	String file = ""
-        			+ "Vanish Commands: /vanish;/v;/evanish;/ev \n"
-        			+ "# Please use semicolon(;) to separate each vanish command.\n";
-        	
-            FileWriter fw = new FileWriter(cFile);
-			BufferedWriter out = new BufferedWriter(fw);
-            out.write(file);
-            out.close();
-            fw.close();
-        } 
-        catch (IOException e) 
-        {
-            e.printStackTrace();
-        }
 	}
 }

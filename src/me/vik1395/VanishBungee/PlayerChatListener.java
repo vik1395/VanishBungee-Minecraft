@@ -1,13 +1,16 @@
 package me.vik1395.VanishBungee;
 
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
+import net.md_5.bungee.api.chat.TextComponent;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.ChatEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 /*
 
 Author: Vik1395
-Project: GList
+Project: VanishBungee
 
 Copyright 2015
 
@@ -25,43 +28,39 @@ public class PlayerChatListener implements Listener
     @EventHandler
     public void onPlayerChat(ChatEvent e) 
     {
-    		
-    		String[] args = null;
-    		Main m = new Main();
-    		if(e.getMessage().toLowerCase().startsWith("/vanish"))
-    		{
-    			CommandSender cm = (CommandSender) e.getSender();
-    			m.vanish(cm);
-    		}
-    		
-    		else if(e.getMessage().toLowerCase().startsWith("/glist"))
-        	{
-    			CommandSender cm = (CommandSender) e.getSender();
-        		args = e.getMessage().split(" ");
-        		m.glistCmd(cm, args);
-        		e.setCancelled(true);
-        	}
-        	
-        	else if(e.getMessage().toLowerCase().startsWith("/find"))
-        	{
-        		CommandSender cm = (CommandSender) e.getSender();
-        		args = e.getMessage().split(" ");
-        		m.findCmd(cm, args);
-        		e.setCancelled(true);
-        	}
-    		
-        	else
-        	{
-        		for(int i = 0; i<Main.vcmds.length;i++)
-        		{
-        			if(e.getMessage().startsWith(Main.vcmds[i]))
-        			{
-        				CommandSender cm = (CommandSender) e.getSender();
-            			m.vanish(cm);
-            			e.setCancelled(true);
-        			}
-        		}
-        	}
+		for(int i = 0; i<Main.vcmds.length;i++)
+		{
+			if(e.getMessage().startsWith(Main.vcmds[i]))
+			{
+				CommandSender sender = (CommandSender) e.getSender();
+    			e.setCancelled(true);
+    			
+    			if(sender instanceof ProxiedPlayer)
+    			{
+    				ProxiedPlayer p = (ProxiedPlayer) sender;
+    				if(p.hasPermission("vanishbungee.vanish"))
+    				{
+    					if(Main.vanish.contains(p.getName()))
+    					{
+    						for(int j = 0; j<Main.vanish.size(); j++)
+    						{
+    							if(Main.vanish.get(j).equalsIgnoreCase(p.getName()))
+    							{
+    								Main.vanish.remove(j);
+    								p.sendMessage(new TextComponent(ChatColor.GREEN + "You have become visible!"));
+    							}
+    						}
+    					}
+    					
+    					else
+    					{
+    						Main.vanish.add(p.getName());
+    						p.sendMessage(new TextComponent(ChatColor.GREEN + "You have become hidden from glist and find comands!"));
+    					}
+    				}
+    			}
+			}
+		}
     }
 }
 
