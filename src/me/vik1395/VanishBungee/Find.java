@@ -26,7 +26,7 @@ public class Find extends Command
 {
 	public Find()
 	{
-		super("find", "");
+		super("find");
 	}
 	
 	@Override
@@ -36,7 +36,7 @@ public class Find extends Command
 		{
 			ProxiedPlayer p = (ProxiedPlayer)sender;
 			
-			if (args.length == 1)
+			if (args.length == 0)
 	        {
 	            sender.sendMessage(new TextComponent(ChatColor.RED + "Please follow this command by a user name"));
 	        } 
