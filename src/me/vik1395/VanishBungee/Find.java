@@ -42,48 +42,48 @@ public class Find extends Command
 	        } 
 			else if(p.hasPermission("vanishbungee.admin"))
 	        {
-	            ProxiedPlayer player = ProxyServer.getInstance().getPlayer( args[1] );
+	            ProxiedPlayer player = ProxyServer.getInstance().getPlayer(args[0]);
 	            if ( player == null || player.getServer() == null )
 	            {
 	                sender.sendMessage(new TextComponent(ChatColor.RED + "That user is not online"));
 	            }
 	            else if(Main.vanish.contains(player.getName()))
 	            {
-	            	sender.sendMessage(new TextComponent(ChatColor.BLUE + args[1] + " is online and " + ChatColor.RED + "vanished " + ChatColor.BLUE + "at " + player.getServer().getInfo().getName()));
+	            	sender.sendMessage(new TextComponent(ChatColor.BLUE + args[0] + " is online and " + ChatColor.RED + "vanished " + ChatColor.BLUE + "at " + player.getServer().getInfo().getName()));
 	            }
 	            else
 	            {
-	                sender.sendMessage(new TextComponent(ChatColor.BLUE + args[1] + " is online at " + player.getServer().getInfo().getName()));
+	                sender.sendMessage(new TextComponent(ChatColor.BLUE + args[0] + " is online at " + player.getServer().getInfo().getName()));
 	            }
 	        }
 			else if(p.hasPermission("vanishbungee.find"))
 	        {
-	            ProxiedPlayer player = ProxyServer.getInstance().getPlayer( args[1] );
+	            ProxiedPlayer player = ProxyServer.getInstance().getPlayer( args[0] );
 	            if ( player == null || player.getServer() == null || Main.vanish.contains(player.getName()))
 	            {
 	                sender.sendMessage(new TextComponent(ChatColor.RED + "That user is not online"));
 	            }
 	            else
 	            {
-	                sender.sendMessage(new TextComponent(ChatColor.BLUE + args[1] + " is online at " + player.getServer().getInfo().getName()));
+	                sender.sendMessage(new TextComponent(ChatColor.BLUE + args[0] + " is online at " + player.getServer().getInfo().getName()));
 	            }
 	        }
 		}
 		
 		else
 		{
-			ProxiedPlayer player = ProxyServer.getInstance().getPlayer( args[0] );
+			ProxiedPlayer player = ProxyServer.getInstance().getPlayer(args[0]);
 			if ( player == null || player.getServer() == null )
             {
                 sender.sendMessage(new TextComponent(ChatColor.RED + "That user is not online"));
             }
             else if(Main.vanish.contains(player.getName()))
             {
-            	sender.sendMessage(new TextComponent(ChatColor.BLUE + args[1] + " is online and " + ChatColor.RED + "vanished " + ChatColor.BLUE + "at " + player.getServer().getInfo().getName()));
+            	sender.sendMessage(new TextComponent(ChatColor.BLUE + args[0] + " is online and " + ChatColor.RED + "vanished " + ChatColor.BLUE + "at " + player.getServer().getInfo().getName()));
             }
             else
             {
-                sender.sendMessage(new TextComponent(ChatColor.BLUE + args[1] + " is online at " + player.getServer().getInfo().getName()));
+                sender.sendMessage(new TextComponent(ChatColor.BLUE + args[0] + " is online at " + player.getServer().getInfo().getName()));
             }
 		}
 	}

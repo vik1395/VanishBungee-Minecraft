@@ -30,7 +30,7 @@ public class PlayerChatListener implements Listener
     {
 		for(int i = 0; i<Main.vcmds.length;i++)
 		{
-			if(e.getMessage().startsWith(Main.vcmds[i]))
+			if(e.getMessage().equalsIgnoreCase(Main.vcmds[i]))
 			{
 				CommandSender sender = (CommandSender) e.getSender();
     			e.setCancelled(true);

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.vik1395</groupId>
   <artifactId>VanishBungee</artifactId>
-  <version>1.2.1</version>
+  <version>1.2.2</version>
   <name>VanishBungee</name>
   <build>
     <sourceDirectory>src</sourceDirectory>
