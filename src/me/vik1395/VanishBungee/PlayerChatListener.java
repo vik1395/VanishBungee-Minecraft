@@ -55,7 +55,7 @@ public class PlayerChatListener implements Listener
     					else
     					{
     						Main.vanish.add(p.getName());
-    						p.sendMessage(new TextComponent(ChatColor.GREEN + "You have become hidden from glist and find comands!"));
+    						p.sendMessage(new TextComponent(ChatColor.GREEN + "You have become hidden from glist and find commands!"));
     					}
     				}
     			}
