@@ -35,5 +35,3 @@ Config File
 
 This plugin is licensed under CC Attribution-NonCommercial-ShareAlike 4.0 International
 [![Creative Commons License](http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US)
-
-In very basic terms, Do whatever you want with the code of this plugin, as long as you give credits to the author and/or the plugin itself.
