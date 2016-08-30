@@ -6,29 +6,29 @@ If you like my work, please consider donating, I would greatly appreciate it. [!
 Permissions
 -----------
 
- 1. `vanishbungee.vanish` - Users with this permission will be able to vanish from bungee commands when they use the vanish command.
- 2. `vanishbungee.glist` - Users with this permission will be able to use the glist command. Hidden users will not be displayed.
- 3. `vanishbungee.glist` - Users with this permission will be able to use the glist command. Hidden users will not be displayed.
- 4. `vanishbungee.find` - Users with this permission will be able to use the find command. Hidden users will not be displayed.
- 5. `vanishbungee.admin` - Users with this permission will be able to see hidden players when they use the find and search commands.
+    vanishbungee.vanish - Users with this permission will be able to vanish from bungee commands when they use the vanish command.
+    vanishbungee.glist - Users with this permission will be able to use the glist command. Hidden users will not be displayed.
+    vanishbungee.glist - Users with this permission will be able to use the glist command. Hidden users will not be displayed.
+    vanishbungee.find - Users with this permission will be able to use the find command. Hidden users will not be displayed.
+    vanishbungee.admin - Users with this permission will be able to see hidden players when they use the find and search commands.
 
 -----------
 
 
 Commands
 -----------
-`/glist` - Shows the number of players online in the bungee network.
 
-`/find` - Allows you to search for a specified player in the server.
+    /glist - Shows the number of players online in the bungee network.
+    /find - Allows you to search for a specified player in the server.
 
 -----------
 
 
 Config File
 -----------
-`Vanish Commands: /vanish;/v;/evanish;/ev`
 
-`#Please use semicolon(;) to separate each vanish command.`
+    Vanish Commands: /vanish;/v;/evanish;/ev
+    #Please use semicolon(;) to separate each vanish command.
 
 -----------
 
