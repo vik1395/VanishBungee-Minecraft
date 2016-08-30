@@ -7,9 +7,13 @@ Permissions
 -----------
 
 `vanishbungee.vanish` - Users with this permission will be able to vanish from bungee commands when they use the vanish command.
+
 `vanishbungee.glist` - Users with this permission will be able to use the glist command. Hidden users will not be displayed.
+
 `vanishbungee.glist` - Users with this permission will be able to use the glist command. Hidden users will not be displayed.
+
 `vanishbungee.find` - Users with this permission will be able to use the find command. Hidden users will not be displayed.
+
 `vanishbungee.admin` - Users with this permission will be able to see hidden players when they use the find and search commands.
 
 -----------
@@ -19,6 +23,7 @@ Commands
 -----------
 
 `/glist` - Shows the number of players online in the bungee network.
+
 `/find` - Allows you to search for a specified player in the server.
 
 -----------
